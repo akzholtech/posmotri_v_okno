@@ -41,9 +41,8 @@ ol {
 .content {
   display: flex;
   justify-content: center;
-  align-items: center;  gap: 30px;
-  max-width: 1140px;
-  max-height: 534px;
+  align-items: center;
+  gap: 30px;
   margin: auto;
 }
 
@@ -94,14 +93,17 @@ ol {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.search-form__textfield:has(:focus) {
+.search-form__textfield:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-form__textfield:focus {
   outline: none;
 }
 
-.search-form__textfield:has(:focus-visible) {
-  outline-offset: 1px;
-  outline-color: #fff;
-  outline-style: solid;
+.search-form__textfield:focus-visible {
+  border: 1px solid #fff;
+  outline: none;
 }
 
 .search-form__pseudo-checkbox {
@@ -126,6 +128,7 @@ input[type="checkbox"]:checked + span {
 
 .search-form__label {
   display: flex;
+  justify-content: center;
   width: fit-content;
   cursor: pointer;
   gap: 5px;
@@ -133,18 +136,20 @@ input[type="checkbox"]:checked + span {
 .search-form__checkbox-list .search-form__label:hover {
   text-decoration: underline;
 }
-.search-form__label:has(:focus) {
+.search-form__label:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.search-form__label:focus {
   outline: none;
 }
 
-.search-form__label:has(:focus-visible) {
-  outline-offset: 1px;
-  outline-color: #fff;
-  outline-style: solid;
+.search-form__label:focus-visible {
+  border: 1px solid #fff;
+  outline: none;
 }
 
 button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
   cursor: pointer;
   font-family: inherit;
@@ -158,6 +163,10 @@ button {
 
 button:focus {
   outline: none;
+}
+
+button:active {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 button:hover {
@@ -201,14 +210,17 @@ button:hover {
   margin-bottom: 30px;
 }
 
-.content__list-item:has(:focus) {
+.content__list-item:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.content__list-item:focus {
   outline: none;
 }
 
-.content__list-item:has(:focus-visible) {
-  outline-offset: 1px;
-  outline-color: #fff;
-  outline-style: solid;
+.content__list-item:focus-visible {
+  border: 1px solid #fff;
+  outline: none;
 }
 
 .content__list-item:hover {
@@ -231,6 +243,10 @@ button:hover {
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
