@@ -9,11 +9,8 @@ html {
 }
 
 .page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   inline-size: 1200px;
-  block-size: 800px;
+  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -42,7 +39,8 @@ ol {
 
 .content {
   display: flex;
-  gap: 30px;
+  justify-content: center;
+  align-items: center;  gap: 30px;
   max-width: 1140px;
   max-height: 534px;
   margin: auto;
