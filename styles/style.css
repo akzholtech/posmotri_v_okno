@@ -45,6 +45,7 @@ ol {
   gap: 30px;
   max-width: 1140px;
   max-height: 534px;
+  margin: auto;
 }
 
 .result {
